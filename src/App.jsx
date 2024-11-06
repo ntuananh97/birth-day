@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 // https://motionarray.imgix.net/preview-159856-q27ngZBKXx-high_0009.jpg?w=660&q=60&fit=max&auto=format 
 
@@ -68,6 +68,16 @@ const FallingLeaves = () => {
 
 function App() {
   const [open, setOpen] = useState(false);
+  const audio = useRef()
+
+
+  useEffect(() => {
+    if (open) {
+      audio.current.play()
+    }
+  }, [open])
+  
+  
   const handleClick = () => {
     setOpen(true);
   };
@@ -76,7 +86,7 @@ function App() {
     <div className="wrapper">
       {open ? (
         <div>
-          <audio hidden autoPlay loop src="/public/happy-birthday.mp3"></audio>
+          <audio ref={audio} hidden autoPlay loop src="/public/happy-birthday.mp3"></audio>
           <h1 className="birthday-text">Chúc mừng sinh nhật lan anh iuuu</h1>
     <div className="confetti-container">
       <div className="confetti"></div>
