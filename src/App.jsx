@@ -20,7 +20,7 @@ const FallingLeaves = () => {
       const width = window.innerWidth;
       if (width < 768) {
           // Thiết bị di động
-          return 30;
+          return 20;
       } else if (width < 1200) {
           // Máy tính bảng
           return 60;
