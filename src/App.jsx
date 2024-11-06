@@ -18,11 +18,10 @@ const FallingLeaves = () => {
       const leafContainer = document.getElementById('leaf-container');
 
       const leafImages = [
-          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png'
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730914375/heart1-Photoroom_vap0wp.png',
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730914375/heart1-Photoroom_vap0wp.png',
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730914375/heart1-Photoroom_vap0wp.png',
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730914375/heart1-Photoroom_vap0wp.png',
       ]; // Thêm đường dẫn tới các hình ảnh lá của bạn
 
       for (let i = 0; i < NUM_LEAVES; i++) {
@@ -102,9 +101,7 @@ function App() {
     </div>
     <div className="sparkles"></div>
 
-        {/* {[...Array(1000)].map((_, index) => (
-          <div key={index} className="leaf"></div>
-        ))} */}
+
         <FallingLeaves />
 
 
@@ -114,6 +111,7 @@ function App() {
           <img
             src="https://birthdaycake24.com/uploads/worigin/2019/06/18/bd-gif5d0840a2bdea0_503e82571271c49db4e4f645e4cacdae.gif"
             alt=""
+            className="birthday-image"
           />
         </div>
       )}

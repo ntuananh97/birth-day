@@ -6,7 +6,7 @@
 }
 
 .wrapper {
-  background: #101010;
+  background: #121116;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -176,4 +176,45 @@
       0 0 40px #ff6f61;
     opacity: 0.8;
   }
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .birthday-text {
+    font-size: 3rem;
+  }
+
+  .sparkles {
+    width: 150px;
+    height: 150px;
+  }
+
+  .confetti {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .sparkles {
+    width: 100px;
+    height: 100px;
+  }
+
+  .confetti-container {
+    display: none; /* Ẩn confetti trên màn hình nhỏ để tránh làm chậm trang */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .birthday-image {
+    width: 100%;
+  }
+  
 }
