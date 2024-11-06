@@ -13,8 +13,40 @@ const getLeafImage = () => {
 }
 
 const FallingLeaves = () => {
+  const [numLeaves, setNumLeaves] = useState(100);
+
+  // Hàm để xác định số lượng lá dựa trên kích thước màn hình
+  const determineNumLeaves = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+          // Thiết bị di động
+          return 30;
+      } else if (width < 1200) {
+          // Máy tính bảng
+          return 60;
+      } else {
+          // Máy tính để bàn
+          return 100;
+      }
+  };
+
   useEffect(() => {
-      const NUM_LEAVES = 100;
+      // Thiết lập số lượng lá ban đầu
+      setNumLeaves(determineNumLeaves());
+
+      // Thêm sự kiện lắng nghe khi kích thước cửa sổ thay đổi
+      const handleResize = () => {
+          setNumLeaves(determineNumLeaves());
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+          window.removeEventListener('resize', handleResize);
+      };
+  }, []);
+
+  useEffect(() => {
       const leafContainer = document.getElementById('leaf-container');
 
       const leafImages = [
@@ -24,7 +56,7 @@ const FallingLeaves = () => {
           'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730914375/heart1-Photoroom_vap0wp.png',
       ]; // Thêm đường dẫn tới các hình ảnh lá của bạn
 
-      for (let i = 0; i < NUM_LEAVES; i++) {
+      for (let i = 0; i < numLeaves; i++) {
           const leaf = document.createElement('div');
           leaf.classList.add('leaf');
 
@@ -54,13 +86,13 @@ const FallingLeaves = () => {
           leafContainer.appendChild(leaf);
       }
 
-      // Dọn dẹp khi component unmount
+      // Dọn dẹp khi component unmount hoặc numLeaves thay đổi
       return () => {
           while (leafContainer.firstChild) {
               leafContainer.removeChild(leafContainer.firstChild);
           }
       };
-  }, []);
+  }, [numLeaves]);
 
   return <div id="leaf-container" className="leaf-container"></div>;
 };
