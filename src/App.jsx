@@ -86,7 +86,7 @@ function App() {
     <div className="wrapper">
       {open ? (
         <div>
-          <audio ref={audio} hidden autoPlay loop src="/public/happy-birthday.mp3"></audio>
+          <audio ref={audio} hidden autoPlay loop src="https://res.cloudinary.com/du0a2dniv/video/upload/v1730912751/simple-happy-birthday-song-254480_yqts4k.mp3"></audio>
           <h1 className="birthday-text">Chúc mừng sinh nhật lan anh iuuu</h1>
     <div className="confetti-container">
       <div className="confetti"></div>
