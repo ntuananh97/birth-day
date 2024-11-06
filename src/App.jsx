@@ -18,11 +18,11 @@ const FallingLeaves = () => {
       const leafContainer = document.getElementById('leaf-container');
 
       const leafImages = [
-          'https://res.cloudinary.com/du0a2dniv/image/upload/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/v1730913085/heart1_lrnchq.png',
-          'https://res.cloudinary.com/du0a2dniv/image/upload/v1730913085/heart1_lrnchq.png'
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png',
+          'https://res.cloudinary.com/du0a2dniv/image/upload/w_100,h_100,c_fill/v1730913085/heart1_lrnchq.png'
       ]; // Thêm đường dẫn tới các hình ảnh lá của bạn
 
       for (let i = 0; i < NUM_LEAVES; i++) {
